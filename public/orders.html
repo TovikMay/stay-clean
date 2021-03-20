@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Orders</title>
+  </head>
+  <body>
+    <div class="container-fluid col-lg-6">
+      <div class="container">
+        <div class="form-style-2">
+          <div
+            class=""
+            style="background-color: rgb(240, 235, 235); padding: 10px; "
+          >
+            <span
+              class="form=style-1-heading"
+              style="font-size: 20px; font-weight: 34px"
+              >Create Orders</span
+            >
+          </div>
+        </div>
+      </div>
+      <form
+        class="row g-3 needs-validation"
+        novalidate
+        action=""
+        method="POST"
+        class="justify-content-center"
+      >
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            value="name"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom02"
+            value="name"
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"
+            >Username</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustomUsername"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="invalid-feedback">Please choose a username.</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Services requested</option>
+            <option value="1">Garbage truck</option>
+            <option value="2">Sewage truck</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Dricver Allocated</option>
+            <option value="1">Driver</option>
+            <option value="2">Conductor</option>
+          </select>
+        </div>
+        <div class="col-lg-5">
+          <label for="validationCustomUsername" class="form-label"
+            >Truck Registration Number</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustomUsername"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="invalid-feedback">
+              Please enter a valid Registration.
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Create Order.</button>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"
+  ></script>
+</html>
