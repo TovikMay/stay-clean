@@ -1,0 +1,19 @@
+extend layout 
+block content
+  body
+    form.justify-content-center(action, method="POST")
+    .container.col-lg-5
+      h2 REGISTER HERE
+      .mb-3
+        label.form-label(for="formGroupExampleInput") Enter your name
+        input.form-control#formGroupExampleInput(type="text", placeholder="your name")
+      .mb-3
+        label.form-label(for="formGroupExampleInput2") Enter your email
+        input.form-control#formGroupExampleInput2(type="text", placeholder="your email")
+      .mb-3
+        label.form-label(for="formGroupExampleInput2") Create password
+        input.form-control#formGroupExampleInput2(type="text", placeholder="your password")
+      .mb-3
+        label.form-label(for="formGroupExampleInput2") Confirm password
+        input.form-control#formGroupExampleInput2(type="text", placeholder="your password")
+      button.btn.btn-primary(type="submit") Submit

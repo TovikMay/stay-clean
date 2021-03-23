@@ -1,0 +1,70 @@
+extend layout 
+block content
+  body
+    form.justify-content-center( method="POST",   action="/employee/addEmployee" enctype="multipart/form-data")
+      .container.col-lg-6
+    .container.col-lg-6
+    .form-style-3
+      div(style='background-color: rgb(240, 235, 235); padding: 10px')
+        span(class='form=style-1-heading' style='font-size: 20px; font-weight: 34px') Add Employee
+    form.row.g-3.needs-validation(novalidate='')
+      .col-md-4
+        label.form-label(for='validationCustom01') First name
+        input#validationCustom01.form-control(type='text' value='name' required='')
+      .col-md-4
+        label.form-label(for='validationCustom02') Last name
+        input#validationCustom02.form-control(type='text' value='name' required='')
+      .col-md-4
+        label.form-label(for='validationCustomUsername') Username
+        .input-group.has-validation
+          input#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' required='')
+          .invalid-feedback
+            | Please choose a username.
+      .col-md-4
+        label.form-label(for='validationCustomUsername') NIN
+        .input-group.has-validation
+          input#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' required='')
+          .invalid-feedback
+            | Please provide a valid NIN.
+      .col-md-4
+        label.form-label(for='validationCustomUsername') City
+        .input-group.has-validation
+          input#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' required='')
+          .invalid-feedback
+            | Please provide a valid city.
+      .col-md-4
+        label.form-label(for='validationCustom03') Drivers Licence
+        input#validationCustom03.form-control(type='text' required='')
+        .invalid-feedback
+          | Please provide a valid drivers licence.
+      .col-md-4
+        select.form-select(aria-label='Default select example')
+          option(selected='') Gender
+          option(value='1') Female
+          option(value='2') Male
+      .col-md-4
+        select.form-select(aria-label='Default select example')
+          option(selected='') Status
+          option(value='1') Married
+          option(value='2') Single
+          option(value='3') Divorced
+      .col-md-4
+        select.form-select(aria-label='Default select example')
+          option(selected='') Incidencies
+          option(value='1') Fights
+          option(value='2') Accidents
+          option(value='3') Thefts
+      .col-4
+        span Upload image
+        input.form-control(type='file' aria-label='file example' required='')
+        .invalid-feedback Invalid form file feedback
+      .col-12
+        .form-check
+          input#invalidCheck.form-check-input(type='checkbox' value='' required='')
+          label.form-check-label(for='invalidCheck')
+            | Agree to terms and conditions
+          .invalid-feedback
+            | You must agree before submitting.
+      .col-12
+        button.btn.btn-primary(type='submit') Register Employee
+  script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js' integrity='sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0' crossorigin='anonymous')

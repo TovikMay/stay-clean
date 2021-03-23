@@ -1,0 +1,21 @@
+extend layout
+block content
+  head 
+    //- link(rel='stylesheet' href='./css/login.css')
+  body
+    //- form.justify-content-center(action, method="POST")
+  form.justify-content-center(action, method="POST")
+  .container.col-lg-5
+    h2 LOGIN
+    .mb-3
+      label.form-label(for="field1") Username
+      input.form-control#formGroupExampleInput(type="text", placeholder="your name")
+    .mb-3
+      label.form-label(for="field2") Email
+      input.form-control#formGroupExampleInput2(type="text", placeholder="your email")
+    .mb-3
+      label.form-label(for="field3") Password
+      input.form-control#formGroupExampleInput2(type="text", placeholder="your password")
+    button.btn.btn-primary(type="submit") login
+    .mb-3
+      label.form-label(for="field4") Register

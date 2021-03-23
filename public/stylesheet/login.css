@@ -1,78 +1,8 @@
-.form-style-1 {
-  max-width: 500px;
-  padding: 20px 12px 10px 20px;
-  font: 13px Arial, Helvetica, sans-serif;
-  font-weight: 35px;
-  
-}
-#form{
-  margin-top: 10px;
-}
-
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 7px;
-  margin: 8px 0;
-  display: inline-block;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: 1px solid #c2c2c2;
-  box-shadow: 1px 1px 4px #ebebeb;
-  -moz-box-shadow: 1px 1px 4px #ebebeb;
-  -webkit-box-shadow: 1px 1px 4px #ebebeb;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  outline: none;
-}
-input[type="text"],
-input[type="email"] {
-  width: 100%;
-  padding: 7px;
-  margin: 8px 0;
-  display: inline-block;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border: 1px solid #c2c2c2;
-  box-shadow: 1px 1px 4px #ebebeb;
-  -moz-box-shadow: 1px 1px 4px #ebebeb;
-  -webkit-box-shadow: 1px 1px 4px #ebebeb;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  outline: none;
-}
-.form-style-1 input[type="submit"],
-.form-style-1 input[type="button"] {
-  width: 100%;
-  border: 1px solid rgb(163, 163, 206);
-  padding: 8px 15px 8px 15px;
-  color: white;
-  background: rgb(47, 91, 236);
-  box-shadow: 1px 1px 4px #dadada;
-  -moz-box-shadow: 1px 1px 4px #dadada;
-  -webkit-box-shadow: 1px 1px 4px #dadada;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz--moz-border-radius: 3px;
-}
-.form-style-1 input[type="submit"]:hover,
-.form-style-1 input[type="button"]:hover {
-  background: rgb(10, 65, 243);
-}
-.form-style-1 .textarea-field {
-  height: 100px;
-  width: 55px;
-}
-.form-style-1 label {
-  display: block;
-  margin: 0px 0px 15px 0px;
-}
-.form-style-1 .input-filed:focus,
-.form-style-1 .email-field:focus,
-.form-style-1 .password-filed:focus {
-  border: 1px solid rgb(78, 77, 77);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+  background-color: blue;
 }
