@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-
-router.get("/landingMain", (req, res) => {
-  res.render("landingMain", { title: "landingMain" });
+router.get("/stayclean", (req, res) => {
+  res.render("stayclean", { title: "stayclean" });
 });
 
 module.exports = router;

@@ -8,14 +8,14 @@ block content
     form.row.g-3.needs-validation(novalidate='' action='' method='POST')
       .col-md-4
         label.form-label(for='validationCustom01') First name
-        input#validationCustom01.form-control(type='text' value='name' required='')
+        input#validationCustom01.form-control(type='text' value='firstname' required='')
       .col-md-4
         label.form-label(for='validationCustom02') Last name
-        input#validationCustom02.form-control(type='text' value='name' required='')
+        input#validationCustom02.form-control(type='text' value='lastname' required='')
       .col-md-4
         label.form-label(for='validationCustomUsername') Username
         .input-group.has-validation
-          input#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' required='')
+          input#validationCustomUsername.form-control(type='text' value='username' required='')
           .invalid-feedback Please choose a username.
       .col-md-4
         select.form-select(aria-label='Default select example')
@@ -24,7 +24,7 @@ block content
           option(value='2') Sewage truck
       .col-md-4
         select.form-select(aria-label='Default select example')
-          option(selected='') Dricver Allocated
+          option(selected='') Driver Allocated
           option(value='1') Driver
           option(value='2') Conductor
       .col-md-4

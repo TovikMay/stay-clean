@@ -1,0 +1,29 @@
+extend layout 
+block content
+    header.card-header
+        h4.card-title Welcome
+    .form-row 
+        .col.form-group 
+            a(href='/employee/addEmployee') Add New Employee 
+        .pull-right 
+        a(href='order') View Order List
+    table.table 
+        thead.thead-dark 
+            tr 
+                th Full Name 
+                th NIN 
+                th City
+                th Gender 
+                th Incidences 
+        tbody 
+            if users.length
+            each user in users
+                tr 
+                    td #{user.lastname +''+ user.firstname}
+                    td #{user.nin}
+                    td #{user.city}
+                    td #{user.gender}
+                    td #{user.incidences}
+                    td 
+                        a(href='/emloyee/update/'+employee._id) Update
+

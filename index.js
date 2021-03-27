@@ -1,20 +1,37 @@
 //Dependecies
 const express = require("express");
+require('dotenv').config();
+const mongoose = require('mongoose');
+const home = require('./routes/landingMain');
+const login = require('./routes/login');
+const register = require('./routes/register');
+const addEmployee = require('./routes/addEmployee');
+const order = require('./routes/order');
+const sign = require('./routes/sign');
+const stayclean = require('./routes/stayclean');
 
 //Instantiating express
 const app = express();
 
+//db connection
+mongoose.connect(process.env.DATABASE, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
+
+mongoose.connection
+   .on('open', () =>{
+     console.log('Mongoose connection open');
+   })
+   .on('error', (err) =>{
+     console.log('Connection erroe: ${err.message}');
+   })
+
 //Cpnfigurations
 app.set("view engine", "pug");
 app.set("views", "./views");
-
-//Routes
-const home = require('./routes/landingMain');
-const login = require('./routes/login')
-const register = require('./routes/register');
-const addEmployee = require('./routes/addEmployee');
-const order = require('./routes/order')
-
 
 //Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -33,6 +50,8 @@ app.use("/register", register);
 app.use('/login', login);
 app.use('/addEmployee', addEmployee);
 app.use('/order', order);
+app.use('/sign', sign);
+app.use('/stayclean', stayclean);
 
 //cater for undefined routes
 app.get('*', (req, res) => {

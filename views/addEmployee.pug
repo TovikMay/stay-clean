@@ -10,10 +10,10 @@ block content
     form.row.g-3.needs-validation(novalidate='')
       .col-md-4
         label.form-label(for='validationCustom01') First name
-        input#validationCustom01.form-control(type='text' value='name' required='')
+        input#validationCustom01.form-control(type='text' value='' required='')
       .col-md-4
         label.form-label(for='validationCustom02') Last name
-        input#validationCustom02.form-control(type='text' value='name' required='')
+        input#validationCustom02.form-control(type='text' value='' required='')
       .col-md-4
         label.form-label(for='validationCustomUsername') Username
         .input-group.has-validation
@@ -33,7 +33,7 @@ block content
           .invalid-feedback
             | Please provide a valid city.
       .col-md-4
-        label.form-label(for='validationCustom03') Drivers Licence
+        label.form-label(for='validationCustom03') Drivers License
         input#validationCustom03.form-control(type='text' required='')
         .invalid-feedback
           | Please provide a valid drivers licence.
@@ -50,10 +50,11 @@ block content
           option(value='3') Divorced
       .col-md-4
         select.form-select(aria-label='Default select example')
-          option(selected='') Incidencies
+          option(selected='') Incidences
           option(value='1') Fights
           option(value='2') Accidents
           option(value='3') Thefts
+          option(value='4') None 
       .col-4
         span Upload image
         input.form-control(type='file' aria-label='file example' required='')
