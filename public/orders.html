@@ -11,27 +11,49 @@
       crossorigin="anonymous"
     />
     <title>Orders</title>
+
+  <style>
+    body{
+      background-image: url();
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+      margin-top: 30px;
+    }
+    h1{
+     padding: 5px 5px 0px 0px;
+     text-align: center;
+     width: 620px;
+     border-radius: 15px 15px 0px 0px;
+     background-color: rgba(6, 49, 70, 0.6);
+     border-radius: 15px 15px 0px 0px;
+     margin: auto;
+     color: rgb(243, 240, 237);
+     font-size: 25px;
+     font-weight: 30pxpx;
+    }
+    label{
+      color: rgb(17, 17, 17);
+    }
+    .container{
+      max-width: 50%;
+      padding-top: 30px;
+    }
+    .btn{
+      padding: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+  </style>
   </head>
   <body>
-    <div class="container-fluid col-lg-6">
+    <h1>Orders</h1>
       <div class="container">
-        <div class="form-style-2">
-          <div
-            class=""
-            style="background-color: rgb(240, 235, 235); padding: 10px; "
-          >
-            <span
-              class="form=style-1-heading"
-              style="font-size: 20px; font-weight: 34px"
-              >Create Orders</span
-            >
-          </div>
-        </div>
-      </div>
       <form
         class="row g-3 needs-validation"
         novalidate
-        action=""
+        action="order/order"
         method="POST"
         class="justify-content-center"
       >
@@ -113,6 +135,8 @@
           <button class="btn btn-primary" type="submit">Create Order.</button>
         </div>
       </form>
+
+    </div>
     </div>
   </body>
   <script

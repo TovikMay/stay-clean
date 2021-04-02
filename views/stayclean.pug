@@ -1,156 +1,49 @@
-head
-  // <link rel="stylesheet" href="stylesheet/stayclean.css">
-  script(src='https://kit.fontawesome.com/06eb17d45a.js' crossorigin='anonymous')
-  style.
-    body{
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-    color: white;
-    }
-    header{
-    position: fixed;
-    background: #22242a;
-    padding: 20px;
-    width: 100%;
-    height: 30px;
-    }
-    .left_area{
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: 800;
-    margin-top: -20px;
-    }
-    .left_area span{
-    color: #10c4e7;
-    }
-    .logout_btn{
-    padding: 5px;
-    background: #19b3d3;
-    text-decoration: none;
-    float: right;
-    margin-top: -50px;
-    margin-right: 40px;
-    border-radius: 2px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #fff;
-    transition: 0.5s;
-    transition-property: background;
-    }
-    .logout_btn:hover{
-    background: rgb(0, 217, 255);
-    }
-    .sidebar{
-    background: #2f323a;
-    margin-top: 70px;
-    padding-top: 30px;
-    position: fixed;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    transition: 0.5s;
-    transition-property: left;
-    }
-    .sidebar .profile_image{
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-    }
-    .sidebar a{
-    color: white;
-    display: block;
-    width: 100%;
-    line-height: 60px;
-    text-decoration: none;
-    padding-left: 40px;
-    box-sizing: border-box;
-    transition: 0.5s;
-    transition-property: background;
-    }
-    .sidebar a:hover{
-    background: #190303;
-    }
-    .sidebar i{
-    padding-right: 10px;
-    }
-    label #sidebar_btn{
-    z-index: 1;
-    color: #fff;
-    position: fixed;
-    cursor: pointer;
-    left: 300px;
-    font-size: 20px;
-    margin: 5px 0;
-    transition: 0.5s;
-    transition-property: color;
-    }
-    label #sidebar_btn:hover{
-    color: #19b3d3;
-    }
-    #check:checked ~ .sidebar{
-    left: -190px;
-    }
-    #check:checked ~.sidebar a span{
-    display: none;
-    }
-    #check:checked ~.sidebar a{
-    font-size: 20px;
-    margin-left: 170px;
-    width: 80px;
-    }
-    .content{
-    margin-left: 250px;
-    background: url(/public/images/cleaner.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    transition: 0.5s;
-    }
-    #check:checked ~.content{
-    margin-left: 60px;
-    }
-    #check{
-    display: none;
-    }
-  input#check(type='checkbox')
-  header
-    label(for='check')
-      i#sidebar_btn.fas.fa-bars
-    .left_area
-      h3
-        | Stay
-        span Clean
-    divc.right_area
-      a.logout_btn(href='#') Logout
-  // Sidebar start
-  .sidebar
-    div
-      img.profile_image(src='/public/images/cleaner.jpg' alt='')
-    a(href='#')
-    a
-      i.fas.fa-desktop
-      span Dashboard
-    a(href='#')
-    a
-      i.fas.fa-cogs
-      span Components
-    a(href='#')
-    a
-      i.fas.fa-table
-      span Tables
-    a(href='#')
-    a
-      i.fas.fa-th
-      span Forms
-    a(href='#')
-    a
-      i.fas.fa-info-circle
-      span About
-    a(href='#')
-    a
-      i.fas.fa-sliders-h
-      span Settings
-  .content
+doctype html 
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheet/stayclean.css")
+  body
+    input#check(type='checkbox')
+    header
+      label(for='check')
+        i#sidebar_btn.fas.fa-bars
+      .left_area
+        h3
+          | Stay
+          span Clean
+      divc.right_area
+        a.logout_btn(href='#') Logout
+    .sidebar
+      div
+        img.profile_image(src='/public/images/cleaner.jpg' style='width: 100%')
+      a(href='#')
+      a
+        i.fas.fa-desktop
+        span Dashboard
+      a(href='#')
+      a
+        i.fas.fa-cogs
+        span Components
+      a(href='#')
+      a
+        i.fas.fa-table
+        span Tables
+      a(href='#')
+      a
+        i.fas.fa-th
+        span Forms
+      a(href='#')
+      a
+        i.fas.fa-info-circle
+        span About
+      a(href='#')
+      a
+        i.fas.fa-sliders-h
+        span Settings
+    .content
+    script(src='https://kit.fontawesome.com/06eb17d45a.js' crossorigin='anonymous')
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js", integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0", crossorigin="anonymous")

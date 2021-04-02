@@ -1,43 +1,55 @@
-extend layout 
-block content
-  .container-fluid.col-lg-6
-    .container
-      .form-style-2
-        div(style='background-color: rgb(240, 235, 235); padding: 10px; ')
-          span(class='form=style-1-heading' style='font-size: 20px; font-weight: 34px') Create Orders
-    form.row.g-3.needs-validation(novalidate='' action='' method='POST')
-      .col-md-4
-        label.form-label(for='validationCustom01') First name
-        input#validationCustom01.form-control(type='text' value='firstname' required='')
-      .col-md-4
-        label.form-label(for='validationCustom02') Last name
-        input#validationCustom02.form-control(type='text' value='lastname' required='')
-      .col-md-4
-        label.form-label(for='validationCustomUsername') Username
-        .input-group.has-validation
-          input#validationCustomUsername.form-control(type='text' value='username' required='')
-          .invalid-feedback Please choose a username.
-      .col-md-4
-        select.form-select(aria-label='Default select example')
-          option(selected='') Services requested
-          option(value='1') Garbage truck
-          option(value='2') Sewage truck
-      .col-md-4
-        select.form-select(aria-label='Default select example')
-          option(selected='') Driver Allocated
-          option(value='1') Driver
-          option(value='2') Conductor
-      .col-md-4
-        select.form-select(aria-label='Default select example')
-          option(selected='') Location
-          option(value='1') Kampala
-          option(value='2') Mukono
-          option(value='2') Kawempe
-      .col-lg-5
-        label.form-label(for='validationCustomUsername') Truck Registration Number
-        .input-group.has-validation
-          input#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' required='')
-          .invalid-feedback
-            | Please enter a valid Registration.
-      .col-12
-        button.btn.btn-primary(type='submit') Create Order.
+doctype html 
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheet/order.css")
+  body
+    .row.justify-content-center 
+            .col-md-6
+                .card-body 
+                    header.card-header
+                        h4.card-title CREATE ORDER 
+                    form(method="POST" action='/order')
+                        div.form-row
+                            div.col.form-group
+                                label First name 
+                                input.form-control(name="firstname")
+                            div.col.form-group
+                                label Last name
+                                input.form-control(name="lastname")
+                            div.col.form-group.mb-3
+                                label User name
+                                input.form-control(name="username")
+                            div.row
+                                div.col-md-4
+                                    select.form-select(aria-label='Default select example')
+                                        option(selected='') Services requested
+                                        option(value='1') Garbage truck
+                                        option(value='2') Sewage truck
+                                div.col-md-4
+                                    select.form-select(aria-label='Default select example')
+                                        option(selected='') Driver Allocated
+                                        option(value='1') Driver
+                                        option(value='2') Conductor
+                                div.col-md-4.mb-2
+                                    select.form-select(aria-label='Default select example')
+                                        option(selected='') Location
+                                        option(value='1') Kampala
+                                        option(value='2') Mukono
+                                        option(value='2') Kawempe
+                            div.row
+                            div.col-lg-12
+                                label.form-label(for='validationCustomUsername') Truck Registration Number
+                                input.form-control(name="number")
+                        div.form-row
+                            div.col.form-group
+                                button.btn.btn-primary.btn-block Submit
+                        div.form-row
+                            div.col.form-group
+                                a(href='/order') Stayclean
+                            div.pull-right
+                                a(class='button', href='/') Home Page
+                            div.col-md-12 © 2021 May Namatovu Mwagale, StayClean.       

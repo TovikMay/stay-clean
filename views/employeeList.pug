@@ -1,11 +1,11 @@
 extend layout 
 block content
     header.card-header
-        h4.card-title Welcome
+        h4.card-title WELCOME
     .form-row 
         .col.form-group 
             a(href='/employee/addEmployee') Add New Employee 
-        .pull-right 
+        .pull-right   
         a(href='order') View Order List
     table.table 
         thead.thead-dark 
@@ -15,6 +15,8 @@ block content
                 th City
                 th Gender 
                 th Incidences 
+                th 
+                th 
         tbody 
             if users.length
             each user in users
@@ -25,5 +27,11 @@ block content
                     td #{user.gender}
                     td #{user.incidences}
                     td 
-                        a(href='/emloyee/update/'+employee._id) Update
-
+                        a(href='/addEmployee/update/'+user._id) Update
+                    td
+                        form(method="post" action='/employee/delete')
+                            input(type="hidden", placeholder="", name="id", value=user._id)
+                            button.btn.btn-dark.btn-block(type="submit") Delete
+    div.form-row
+        div.pull-right
+            a(class='button', href='/stayclean/stayclean') Home Page

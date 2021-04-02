@@ -1,21 +1,33 @@
-extend layout
-block content
+doctype html 
+html 
   head 
-    //- link(rel='stylesheet' href='./css/login.css')
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheet/login.css")
   body
-    //- form.justify-content-center(action, method="POST")
-  form.justify-content-center(action, method="POST")
-  .container.col-lg-5
-    h2 LOGIN
-    .mb-3
-      label.form-label(for="field1") Username
-      input.form-control#formGroupExampleInput(type="text", placeholder="your name", required="")
-    .mb-3
-      label.form-label(for="field2") Email
-      input.form-control#formGroupExampleInput2(type="text", placeholder="your email", required="")
-    .mb-3
-      label.form-label(for="field3") Password
-      input.form-control#formGroupExampleInput2(type="text", placeholder="your password" required="")
-    button.btn.btn-primary(type="submit") login
-    .mb-3
-      label.form-label(for="field4") Register
+   .row.justify-content-center 
+            .col-md-6
+                .card-body 
+                    header.card-header
+                        h4.card-title LOGIN  
+                    form(method="POST" action='/login')
+                        div.form-row
+                            div.col.form-group
+                                label User name 
+                                input.form-control(name="username")
+                        div.form-row
+                            div.col.form-group
+                                label Create Password
+                                input.form-control(type="password" name="password")
+                        div.form-row
+                            div.col.form-group
+                                button.btn.btn-primary.btn-block Login
+                        div.form-row
+                            div.col.form-group
+                                a(href='/stayclean/stayclean') Stayclean
+                            div.pull-right
+                                a(class='button', href='') 
+                                div.col-md-12 © 2021 May Namatovu Mwagale, StayClean. 
+                        

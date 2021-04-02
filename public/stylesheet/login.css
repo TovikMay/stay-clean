@@ -1,56 +1,31 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background: url(/public/images/cleaner.jpg) no-repeat;
+body{
+  background-image: url();
+  background-position: center;
   background-size: cover;
-  
+  font-family: sans-serif;
+  margin-top: 30px;
 }
-.login-box{
-  width: 280px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(22, 22, 22);
+h1{
+ padding: 5px 5px 0px 0px;
+ text-align: center;
+ width: 620px;
+ border-radius: 15px 15px 0px 0px;
+ background-color: rgba(6, 49, 70, 0.6);
+ border-radius: 15px 15px 0px 0px;
+ margin: auto;
+ color: rgb(243, 240, 237);
+ font-size: 25px;
+ font-weight: 30pxpx;
 }
-.login-box h1{
-  float: left;
-  font-size: 30px;
-  border-bottom:3px solid #121312;
-  margin-bottom: 50px;
-  padding: 13px;
+label{
+  color: rgb(17, 17, 17);
 }
-.textbox{
-  width: 100%;
-  overflow: hidden;
-  font-size: 20px;
-  padding: 8px 0;
-  margin: 8px 0;
-  border-bottom: 1px solid #070707;
-}
-.textbox i{
-  width: 26px;
-  float: left;
-  text-align: center;
-}
-.textbox input{
-  border: none;
-  outline: none;
-  background: none;
-  color: rgb(243, 240, 240);
-  font-size: 15px;
-  width: 80%;
-  float: left;
-  margin: 0 10px;
+.container{
+  max-width: 50%;
+  padding-top: 30px;
 }
 .btn{
-  width: 100%;
-  background: none;
-  border: 1px solid #0a0a0a;
-  color: rgb(8, 8, 8);
   padding: 5px;
-  font-size: 17px;
   cursor: pointer;
-  margin: 1px 0;
+  margin: 10px 0;
 }

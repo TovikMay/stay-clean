@@ -11,57 +11,120 @@
       crossorigin="anonymous"
     />
     <title>Register</title>
+    <style>
+      body{
+        background-image: url();
+        background-position: center;
+        background-size: cover;
+        font-family: sans-serif;
+        margin-top: 30px;
+      }
+      h1{
+       padding: 5px 5px 0px 0px;
+       text-align: center;
+       width: 620px;
+       border-radius: 15px 15px 0px 0px;
+       background-color: rgba(6, 49, 70, 0.6);
+       border-radius: 15px 15px 0px 0px;
+       margin: auto;
+       color: rgb(243, 240, 237);
+       font-size: 25px;
+       font-weight: 30pxpx;
+      }
+      label{
+        color: rgb(17, 17, 17);
+      }
+      .container{
+        max-width: 50%;
+        padding-top: 30px;
+      }
+      .btn{
+        padding: 5px;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    </style>
   </head>
+  <h1>REGISTER HERE</h1>
   <body>
-      <form action="" method="POST" class="justify-content-center">
-    <div class="container col-lg-5">
-        <h2>REGISTER HERE</h2>
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label"
-          >Enter your name</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput"
-          placeholder="your name"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label"
-          >Enter your email</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput2"
-          placeholder="your email"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label"
-          >Create password</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput2"
-          placeholder="your password"
-        />
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label"
-          >Confirm password</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="formGroupExampleInput2"
-          placeholder="your password"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <div class="container">
+      <form
+        class="row g-3 needs-validation"
+        novalidate
+        action="order/order"
+        method="POST"
+        class="justify-content-center"
+      >
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom01"
+            value=""
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustom02"
+            value=""
+            required
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"
+            >Enter email</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustomUsername"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="invalid-feedback">Please choose a username.</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"
+            >Create password</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustomUsername"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="invalid-feedback">Please create password.</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label"
+            >Confrim password</label
+          >
+          <div class="input-group has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustomUsername"
+              aria-describedby="inputGroupPrepend"
+              required
+            />
+            <div class="invalid-feedback">Please confirm password.</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Create Order.</button>
+        </div>
+      </form>
+    </div>
     </div>
   </body>
   <script
@@ -69,4 +132,5 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"
   ></script>
+  </body>
 </html>

@@ -1,115 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <title>Employee</title>
-  </head>
-  <body>
-    <div class="container col-lg-6">
-      <div class="form-style-3">
-        <div
-          class=""
-          style="background-color: rgb(240, 235, 235); padding: 10px"
-        >
-          <span
-            class="form=style-1-heading"
-            style="font-size: 20px; font-weight: 34px"
-            >Add Employee</span
-          >
-        </div>
-      </div>
-      <form class="row g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" id="validationCustom01" value="name" required>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="validationCustom02" value="name" required>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">Username</label>
-          <div class="input-group has-validation">
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Please choose a username.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">NIN</label>
-          <div class="input-group has-validation">
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Please provide a valid NIN.
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <label for="validationCustomUsername" class="form-label">City</label>
-          <div class="input-group has-validation">
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-            <div class="invalid-feedback">
-              Please provide a valid city.
-            </div>
-          </div>
-        </div>
-          <div class="col-md-4">
-            <label for="validationCustom03" class="form-label">Drivers Licence</label>
-            <input type="text" class="form-control" id="validationCustom03" required>
-            <div class="invalid-feedback">
-              Please provide a valid drivers licence.
-            </div>
-        </div>
-        <div class="col-md-4">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Gender</option>
-          <option value="1">Female</option>
-          <option value="2">Male</option>
-        </select>
-      </div>
-      <div class="col-md-4">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Status</option>
-          <option value="1">Married</option>
-          <option value="2">Single</option>
-          <option value="3">Divorced</option>
-        </select>
-      </div>
-      <div class="col-md-4">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Incidencies</option>
-          <option value="1">Fights</option>
-          <option value="2">Accidents</option>
-          <option value="3">Thefts</option>
-          <option value="4">None</option>
-        </select>
-      </div>
-        <div class="col-4">
-          <span>Upload image</span>
-          <input type="file" class="form-control" aria-label="file example" required>
-          <div class="invalid-feedback">Invalid form file feedback</div>
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-            <label class="form-check-label" for="invalidCheck">
-              Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-              You must agree before submitting.
-            </div>
-          </div>
-        </div>
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Register Employee</button>
-        </div>
-      </form>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+  crossorigin="anonymous"
+/>
+  <title>Add Employee</title>
+
+  <style>
+    body{
+      background-image: url();
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+      margin-top: 30px;
+    }
+    h1{
+     padding: 5px 5px 0px 0px;
+     text-align: center;
+     width: 620px;
+     border-radius: 15px 15px 0px 0px;
+     background-color: rgba(6, 49, 70, 0.6);
+     border-radius: 15px 15px 0px 0px;
+     margin: auto;
+     color: rgb(243, 240, 237);
+     font-size: 25px;
+     font-weight: 30pxpx;
+    }
+    label{
+      color: rgb(17, 17, 17);
+    }
+    .container{
+      max-width: 50%;
+      padding-top: 30px;
+    }
+    .btn{
+      padding: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+  </style>
+ <body>
+  <h1>REGISTER EMPLOYEE</h1>
+  <div class="container">
+  <form
+  class="row g-3 needs-validation"
+  novalidate
+  action="/addEmployee/addEmployee"
+  method="POST"
+  class="justify-content-center" enctype="multipart/form-data"
+>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationCustom01"
+      value=""
+      name="firstname"
+    />
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationCustom02"
+      value=""
+      name="lastname"/>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label"
+      >Username</label
+    >
+    <div class="input-group has-validation">
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend"
+        name="username"
+      />
     </div>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>>
-  </script>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label"
+      >NIN</label
+    >
+    <div class="input-group has-validation">
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend"
+        name="nin"
+      />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label"
+      >Residence</label
+    >
+    <div class="input-group has-validation">
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend"
+       name="residence"
+      />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label"
+      >Drivers Licence</label
+    >
+    <div class="input-group has-validation">
+      <input
+        type="text"
+        class="form-control"
+        id="validationCustomUsername"
+        aria-describedby="inputGroupPrepend"
+        name="licence"
+      />
+    </div>
+  </div>
+  <div class="col-md-4">
+    <select class="form-select" aria-label="Default select example" name="gender">
+      <option selected>Gender</option>
+      <option value="1">Female</option>
+      <option value="2">Male</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <select class="form-select" aria-label="Default select example" name="status">
+      <option selected>Status</option>
+      <option value="1">Married</option>
+      <option value="2">Single</option>
+      <option value="2">Divorced</option>
+    </select>
+  </div>
+  <div class="col-md-4">
+    <select class="form-select" aria-label="Default select example" name="incidences">
+      <option selected>Incidences</option>
+      <option value="1">Thefts</option>
+      <option value="2">Fights</option>
+      <option value="2">Accidents</option>
+      <option value="2">None</option>  
+    </select>
+  </div>
+  <div class="col-gb-4">
+  <span>Upload image</span>
+  <input class="form-control" type='file' aria-label='file example' name='imageupload'></input.form-control>
+  <label invalid-feedback Invalid form file feedback></label>
+  <div class="col-12"></div>
+  <div class="form-check">
+  <input invalidCheck="form-check-input" type='checkbox' value='' name='terms'>
+  <label class="form-check-label(for='invalidCheck')" name="terms">
+    Agree to terms and conditions
+  </label>
+  </div>
+  </div> 
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit" name="btn">Submit.</button>
+  </div>
+  </form>
+</div>
+</body>
 </html>

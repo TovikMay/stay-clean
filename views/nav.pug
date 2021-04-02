@@ -1,4 +1,3 @@
-link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
   .container-fluid
     a.navbar-brand(href="#", style="color: green; font-size: 30px")
@@ -12,14 +11,18 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
         li.nav-item
           a.nav-link.active(aria-current="page", href="#") Home
         li.nav-item
+          a.nav-link.active(aria-current="page", href="#") About us
+        li.nav-item
           a.nav-link(href="#") Contact us
         li.nav-item.dropdown
           a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false").
             
-            Login
-            
-          ul.dropdown-menu(aria-labelledby="navbarDropdown")
+            Login 
+          ul.dropdown-menu(aria-labelledby="navbarDropdown" name='login')
             li
               a.dropdown-item(href="#") Register
         form.d-flex
-          input.form-control.me-2(type="search", placeholder="Search", aria-label="Search")
+          input.form-control.me-2(type="search" placeholder="Search" aria-label="Search" name='register')
+          button.submit-btn(type='submit') Register
+    div 
+      img(src="/public/images/wade-unsplash.jpg")

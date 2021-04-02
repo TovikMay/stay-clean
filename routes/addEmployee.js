@@ -5,7 +5,7 @@ const multer = require('multer')
 const AddEmployee =require('../models/AddEmployee')
 
 
-router.get("/employee", (req, res) => {
+router.get("/addEmployee", (req, res) => {
   res.render("addEmployee", { title: "addEmployee" });
 });
 
@@ -22,26 +22,48 @@ var storage = multer.diskStorage({
 var upload = multer({storage: storage})
 
 router.post('/addEmployee', upload.single('imageupload'), async(req,res) => {
-    const addEmployee = new AddEmployee(req.body);
-    addEmployee.imageupload - req.file.path;
+    console.log(req.body);    
     try{
         const addEmployee = new AddEmployee(req.body);
+        addEmployee.imageupload - req.file.path;
         await addEmployee.save()
-        res.redirect('/employee');
+        // res.send('submited')
+        res.redirect('/addEmployee/');
       }
       catch(err){
         console.log(err);
         res.send('Oops! Something went wrong.');
       }
 })
-
+//get data from database
 router.get("/", async(req, res) => {
   try {
     const employeeDetails = await AddEmployee.find();
-    res.render("employeeList", { users: "Employee List" });
+    res.render("employeeList", { users: employeeDetails});
   }catch(err){
     res.send('Failed to retrive employee details');
   }
   
 });
+
+//updated employee details
+router.get('/update/:id', async (req, res) => {
+  try {
+      const updateddEmployee = await addEmployee.findOne({ _id: req.params.id })
+      res.render('updateEmployee', { user: updateaddEmployee })
+  } catch (err) {
+      res.status(400).send("Unable to find item in the database");
+  }
+})
+// route to save the deleted updated data
+router.post('/update', async (req, res) => {
+  try {
+      await addEmployee.findOneAndUpdate({_id:req.query.id}, req.body)
+      res.redirect('/employee/employeeList');
+  } catch (err) {
+      res.status(404).send("Unable to update item in the database");
+  }
+})
+
+
 module.exports = router;

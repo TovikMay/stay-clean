@@ -20,11 +20,11 @@ const addEmployeeSchema = new mongoose.Schema({
         unique: true,
         required: 'Please Enter NIN'
      },
-     city: {
+     residence: {
         type: String,
         required: 'Please Enter city'
      },
-     driverslicense: {
+     licence: {
         type: String,
         unique: true,
         required: 'Please Enter drivers license'
@@ -35,7 +35,7 @@ const addEmployeeSchema = new mongoose.Schema({
          type: String
      }],
      imageupload: String,
-     agreetotermsandconditions: String,
+     terms: String,
 })
 
 //exporting mongoose model

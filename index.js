@@ -2,13 +2,20 @@
 const express = require("express");
 require('dotenv').config();
 const mongoose = require('mongoose');
-const home = require('./routes/landingMain');
 const login = require('./routes/login');
 const register = require('./routes/register');
 const addEmployee = require('./routes/addEmployee');
 const order = require('./routes/order');
-const sign = require('./routes/sign');
 const stayclean = require('./routes/stayclean');
+const expressSession = require('express-session')({
+  secret: 'secret',
+  resave: false,
+  saveUninitialized: false
+});
+const passport = require('passport');
+const Register = require("./models/Register");
+const Login = require("./models/Login");
+const connectEnsureLogin = require('connect-ensure-login');
 
 //Instantiating express
 const app = express();
@@ -38,6 +45,18 @@ app.use(express.urlencoded({ extended: true }));
 
 //Middleware static files
 app.use(express.static("public"));
+app.use('/public/images', express.static(__dirname + '/public/images'));
+
+//middleware for passport and session
+app.use(expressSession);
+app.use(passport.initialize());
+app.use(passport.session());
+
+//passport configs
+passport.use(Register.createStrategy());
+passport.serializeUser(Register.serializeUser());
+passport.deserializeUser(Register.deserializeUser());
+
 
 //custom middleware
 app.use((req, res, next) => {
@@ -45,13 +64,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/home', home);
 app.use("/register", register);
 app.use('/login', login);
 app.use('/addEmployee', addEmployee);
 app.use('/order', order);
-app.use('/sign', sign);
 app.use('/stayclean', stayclean);
+
+
 
 //cater for undefined routes
 app.get('*', (req, res) => {

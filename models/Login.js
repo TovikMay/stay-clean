@@ -1,20 +1,18 @@
+//require mongoose
 const mongoose = require('mongoose');
 
+//schema for data
 const loginSchema = new mongoose.Schema({
     username: {
         type: String,
         required: 'Please Enter user name'
-    },
-    email: {
-       type: String,
-       unique: true,
-       required: 'Please Enter email'
-    },
-    password: {
+     },
+     password: {
         type: String,
         unique: true,
         required: 'Please Enter password'
      },
+    
 })
 
 //exporting mongoose model
