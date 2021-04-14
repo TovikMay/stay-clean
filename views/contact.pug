@@ -1,0 +1,34 @@
+doctype html 
+html 
+  head 
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+    link(rel="stylesheet" href="/stylesheet/contact.css")
+  body
+   .row.justify-content-center 
+            .col-md-6
+                .card-body 
+                    header.card-header
+                        h4.card-title CONTACT US 
+                    form(method="POST" action='/contact')
+                        div.form-row
+                            div.col.form-group
+                                label Full name 
+                                input.form-control(name="fullname")
+                        div.form-row
+                            div.col.form-group
+                                label Email 
+                                input.form-control(type="email" name="email")
+                        div.form-row
+                            div.col.form-group
+                                label Mobile number 
+                                input.form-control(type="number" name="number")
+                        div.form-row
+                            div.col.form-group
+                                label Message 
+                                input.textbox(type="text" name="message")
+                        div.form-row
+                            div.col.form-group
+                                button.btn.btn-primary.btn-block Send                    

@@ -1,5 +1,5 @@
 body{
-    background-image: url();
+    background-image: url() no repeate top center;
     background-position: center;
     background-size: cover;
     font-family: sans-serif;
@@ -10,19 +10,24 @@ body{
    text-align: center;
    width: 600px;
    border-radius: 15px 15px 0px 0px;
-   background-color: rgb(211, 209, 209);
+   background-color:rgb(235, 239, 240);
    border-radius: 15px 15px 0px 0px;
    margin: auto;
-   color: rgb(14, 13, 13);
+   color: #00458B;
    font-size: 25px;
    font-weight: 30px;
   }
   label{
-    color: rgb(17, 17, 17);
+    color: #00458B;
   }
   .container{
     max-width: 50%;
     padding-top: 30px;
+    border: 1px solid  black;
+    border-radius: 8px;
+    border: inset;
+    border-color: rgb(216, 216, 127);
+    
   }
   .btn{
     padding: 5px;

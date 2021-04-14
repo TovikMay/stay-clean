@@ -1,5 +1,5 @@
 body{
-  background-image: url();
+  background: url(''); 
   background-position: center;
   background-size: cover;
   font-family: sans-serif;
@@ -18,11 +18,12 @@ h1{
  font-weight: 30pxpx;
 }
 label{
-  color: rgb(17, 17, 17);
+  color:  #0a0a0a;
 }
 .container{
   max-width: 50%;
   padding-top: 30px;
+  
 }
 .btn{
   padding: 5px;

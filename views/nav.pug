@@ -1,28 +1,145 @@
-nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
-  .container-fluid
-    a.navbar-brand(href="#", style="color: green; font-size: 30px")
-      | STAY
-      span(style="color: #1dc4e7 ;") /
-      | CLEAN
-    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
-      span.navbar-toggler-icon
-    .collapse.navbar-collapse#navbarSupportedContent
-      ul.navbar-nav.me-auto.mb-2.mb-lg-0(style="margin-left: 600px;")
-        li.nav-item
-          a.nav-link.active(aria-current="page", href="#") Home
-        li.nav-item
-          a.nav-link.active(aria-current="page", href="#") About us
-        li.nav-item
-          a.nav-link(href="#") Contact us
-        li.nav-item.dropdown
-          a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false").
-            
-            Login 
-          ul.dropdown-menu(aria-labelledby="navbarDropdown" name='login')
-            li
-              a.dropdown-item(href="#") Register
-        form.d-flex
-          input.form-control.me-2(type="search" placeholder="Search" aria-label="Search" name='register')
-          button.submit-btn(type='submit') Register
-    div 
-      img(src="/public/images/wade-unsplash.jpg")
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    |   
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |   
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    |   
+    link(rel='stylesheet', href='/public/stylesheet/nav.css')
+    |   
+    script(src='https://kit.fontawesome.com/06eb17d45a.js', crossorigin='anonymous')
+    |   
+    title Nav
+    |   
+    style.
+      *{
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+      }
+      body{
+      font-family:sans-serif;
+      }
+      nav{
+      background: #0082e6;
+      height: 80px;
+      width: 100%;
+      }
+      label.logo{
+      color: white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+      }
+      nav ul{
+      float:right;
+      margin-right: 20px;
+      }
+      nav ul li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+      }
+      nav ul li a{
+      color: white;
+      font-size: 17px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      }
+      a.active,a:hover{
+      background: #1b9bff;
+      transition: .5s;
+      }
+      .checkbtn{
+      font-size: 30px;
+      color: white;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+      }
+      #check{
+      display: none;
+      }
+      @media(max-width: 952px){
+      label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+      }
+      nav ul li a{
+      font-size: 16px;
+      }
+      }
+      @media (max-width: 858px){
+      .checkbtn{
+      display: block;
+      }
+      ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+      }
+      nav ul li{
+      display: block;
+      margin: 50px;
+      line-height: 30px;
+      }
+      nav ul li a{
+      font-size: 20px;
+      }
+      a:hover,a.active{
+      background: none;
+      color: #0082e6;
+      }
+      label:hover,label.active{
+      background: none;
+      color: #0082e6;
+      } 
+      #check:checked  ~ ul{
+      left: 0;
+      }
+      }
+      section{
+      background: url(/public/images/Stay\ Clean.png);
+      background-size: cover;
+      height: calc(100vh - 80px);
+      }
+  body
+    nav
+      input#check(type='checkbox')
+      |     
+      label.checkbtn(for='check')
+        i#sidebar_btn.fas.fa-bars
+      |     
+      label.logo 
+        a(class='text', href='/register/register' style='color: white;') StayClean 
+      |     
+      ul
+        li
+          a(href='#') Home
+        |       
+        li
+          a(href='#') About Us
+        |       
+        li
+          a(href='/contact/contact') Contact us
+        |       
+        li
+          a(href='#') Feedback
+        |       
+        li
+          a(href='#') Services
+    |   
+    section

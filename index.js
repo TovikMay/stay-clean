@@ -7,6 +7,9 @@ const register = require('./routes/register');
 const addEmployee = require('./routes/addEmployee');
 const order = require('./routes/order');
 const stayclean = require('./routes/stayclean');
+const nav = require('./routes/nav');
+const contact = require('./routes/contact');
+const aboutUs = require('./routes/aboutUs');
 const expressSession = require('express-session')({
   secret: 'secret',
   resave: false,
@@ -69,6 +72,9 @@ app.use('/login', login);
 app.use('/addEmployee', addEmployee);
 app.use('/order', order);
 app.use('/stayclean', stayclean);
+app.use('/nav', nav);
+app.use('/contact', contact);
+app.use('/aboutUs', aboutUs);
 
 
 
