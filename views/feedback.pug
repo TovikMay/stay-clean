@@ -1,0 +1,42 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl", crossorigin="anonymous")
+title Feedback
+style.
+  
+  body{
+      background-image: url(/public/images/back3.jpeg);background-size: cover;}
+  
+.container.mt-4.shadow-ld
+  .row
+    .col-md-3
+    .col-md-6
+      h2.text-white Feedback Form
+      p.text.white We would like to hear thoughts, concerns or problems with anything so we can serve you better!
+      hr
+      form(action)
+        h4 Feedback type
+        .row
+          .col-md-4
+            input.pointer(type="radio", name="feed")
+            |   
+            label Comments
+          .cold-md-4
+            input.pointer(type="radio", name="feed")
+            |   
+            label Connection reports
+          .cold-md-4
+            input.pointer(type="radio", name="feed")
+            |   
+            label Questions
+        .form-group.mt-3.mb-3
+          label.form-label Full name
+          input.form-control(type="text", required)
+        .form-group.mb-2
+          label.form-labe Email
+          input.form-control(type="Email", required)
+        .form-group.mb-2
+          label.form-label Describe Feedback
+          textarea.form-control(rows="4", required)
+        button.btn.btn-primary(type="submit") Submit feedback

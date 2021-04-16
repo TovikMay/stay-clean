@@ -10,19 +10,6 @@ router.get("/", (req, res) => {
   res.render("login", { title: "Login form" });
 });
 
-
-router.post('/login', async(req,res) => {
-  try{
-    const login = new Login(req.body);
-    await login.save()
-    res.send('Thank you for your registration');
-  }
-  catch(err){
-    console.log(err);
-    res.send('Oops! Something went wrong.');
-  }
-})
-
 // checks username and password using passport
 router.post('/', passport.authenticate('local', {failureRedirect: '/login'}), (req,res) =>{
   req.session.user = req.user;

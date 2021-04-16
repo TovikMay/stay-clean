@@ -25,39 +25,40 @@ html
                       .col-md-4
                         label.form-label(for='validationCustomUsername') NIN
                         input.input-group.has-validation#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' name='nin')
+                      .col-md-4 
+                        label.form-label(for='validationCustomusername') Date of birth
+                        input.input-group.has-validation#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' name='DoB')
                       .col-md-4
-                        label.form-label(for='validationCustomUsername') Residence          
-                        input.input-group.has-validation#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' name='residence')
+                        label.form-label(for='validationCustomUsername') City          
+                        input.input-group.has-validation#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' name='city')
                       .col-md-4
                         label.form-label(for='validationCustomUsername') Drivers Licence         
                         input.input-group.has-validation#validationCustomUsername.form-control(type='text' aria-describedby='inputGroupPrepend' name='licence')
                       .col-md-4
-                        select.form-select(aria-label='Default select example' name='gender')
-                          option(selected='') Gender
+                        label.form-label(for="validationCustomUsername") Gender
+                        select.form-select(aria-label='Default select example' name='gender') 
+                          option(selected='') Select
                           option(value='1') Female
                           option(value='2') Male
                       .col-md-4
+                        label.form-label(for="validationCustomUsername") Status
                         select.form-select(aria-label='Default select example' name='status')
-                          option(selected='') Status
+                          option(selected='') Select
                           option(value='1') Married
                           option(value='2') Single
                           option(value='2') Divorced
-                      .col-md-4
+                      .col-md-6
+                        label.form-label(for="validationCustomUsername") Incidences
                         select.form-select(aria-label='Default select example' name='incidences')
-                          option(selected='') Incidences
+                          option(selected='') Select
                           option(value='1') Thefts
                           option(value='2') Fights
                           option(value='2') Accidents
                           option(value='2') None
-                      .col-gb-4
-                        span Upload image
+                      .col-md-6
+                        label.form-label(for="validationCustomUsername") Upload image
                         input.form-control(type='file' aria-label='file example' name='imageupload')
                         label(invalid-feedback='' invalid='' form='' file='' feedback='')
-                        .col-12
-                        .form-check
-                          input(invalidcheck='form-check-input' type='checkbox' value='' name='terms')
-                          label.form-check-label(for='invalidCheck')
-                            | Agree to terms and conditions
                       .col-12
                         button.btn.btn-primary(type='submit' name='btn') Submit
                         div.col.form-group

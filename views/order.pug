@@ -25,24 +25,24 @@ html
                                 input.form-control(name="username")
                             div.row
                                 div.col-md-4
-                                    select.form-select(aria-label='Default select example')
+                                    select.form-select(aria-label='Default select example' name='services')
                                         option(selected='') Services requested
                                         option(value='1') Garbage truck
                                         option(value='2') Sewage truck
                                 div.col-md-4
-                                    select.form-select(aria-label='Default select example')
+                                    select.form-select(aria-label='Default select example' name='allocated')
                                         option(selected='') Driver Allocated
                                         option(value='1') Driver
                                         option(value='2') Conductor
                                 div.col-md-4.mb-2
-                                    select.form-select(aria-label='Default select example')
+                                    select.form-select(aria-label='Default select example' name='location')
                                         option(selected='') Location
                                         option(value='1') Kampala
                                         option(value='2') Mukono
                                         option(value='2') Kawempe
                             div.row
                             div.col-lg-12
-                                label.form-label(for='validationCustomUsername') Truck Registration Number
+                                label.form-label(for='validationCustomUsername' name='trucknumber') Truck Registration Number
                                 input.form-control(name="number")
                         div.form-row
                             div.col.form-group

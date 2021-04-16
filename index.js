@@ -10,6 +10,8 @@ const stayclean = require('./routes/stayclean');
 const nav = require('./routes/nav');
 const contact = require('./routes/contact');
 const aboutUs = require('./routes/aboutUs');
+const feedback = require('./routes/feedback');
+const truckReg= require('./routes/truckReg');
 const expressSession = require('express-session')({
   secret: 'secret',
   resave: false,
@@ -75,6 +77,8 @@ app.use('/stayclean', stayclean);
 app.use('/nav', nav);
 app.use('/contact', contact);
 app.use('/aboutUs', aboutUs);
+app.use('/feedback', feedback);
+app.use('/truckReg', truckReg);
 
 
 

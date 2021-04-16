@@ -1,7 +1,6 @@
 body{
-    background-image: url() no repeate top center;
+    background-image: url(/public/images/back3.jpeg);background-size: cover;
     background-position: center;
-    background-size: cover;
     font-family: sans-serif;
     margin-top: 30px;
   }
@@ -23,10 +22,9 @@ body{
   .container{
     max-width: 50%;
     padding-top: 30px;
-    border: 1px solid  black;
     border-radius: 8px;
-    border: inset;
-    border-color: rgb(216, 216, 127);
+    background-color: whitesmoke;
+ 
     
   }
   .btn{
@@ -34,3 +32,4 @@ body{
     cursor: pointer;
     margin: 10px 0;
   }
+  

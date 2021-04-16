@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const multer = require('multer')
 const Register = require('../models/Register');
+const passport = require('passport');
 
 router.get("/register", (req, res) => {
   res.render("registerAdmin", { title: "Register Form" });
@@ -24,6 +25,10 @@ router.post('/',  async(req,res) => {
   }
 })
 
+router.post('/', passport.authenticate('local', {failureRedirect: '/register'}), (req,res) =>{
+  req.session.user = req.user;
+  res.redirect('/login');
+})
 
 
 

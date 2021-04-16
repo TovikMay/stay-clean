@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const multer = require('multer')
-const Contact = require('../models/Contact');
+const Feedback = require('../models/Feedback');
 
-router.get("/contact", (req, res) => {
-  res.render("contact", { title: "Contact us Form" });
+router.get("/feedback", (req, res) => {
+  res.render("feedback", { title: "Feedback Form" });
 });
 
 router.post('/',  async(req,res) => {
   try{
-    const contact = new Contact(req.body);
-    await Contact.contact(contact, req.body, (err) =>{
+    const feedback = new Feedback(req.body);
+    await Feedback.feedback(feedback, req.body, (err) =>{
       if (err)
       {
         throw err

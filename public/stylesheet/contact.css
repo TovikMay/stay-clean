@@ -1,7 +1,6 @@
 body {
-  background-image: url();
+  background-image: url(/public/images/back3.jpeg);background-size: cover;
   background-position: center;
-  background-size: cover;
   font-family: sans-serif;
   margin-top: 30px;
 }
@@ -31,7 +30,13 @@ label {
 }
 .textbox {
   padding: 5px 5px 0px 0px;
-  width: 620px;
-  height: 80px;
+  width: 670px;
+  height: 90px;
   max-width: 100%;
+  border: 1px solid rgb(202, 197, 197);
+  border-radius: 5px;
 }
+.card-body{
+  background-color: whitesmoke;
+}
+

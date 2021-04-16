@@ -6,7 +6,7 @@ block content
         .col.form-group 
             a(href='/addEmployee/addEmployee') Add New Employee 
         .pull-right   
-        a(href='/order/order') View Order List
+        a(href='/order/order') Request List
     table.table 
         thead.thead-dark 
             tr 
@@ -27,11 +27,13 @@ block content
                     td #{user.gender}
                     td #{user.incidences}
                     td 
+                    td 
+                    td
                         a(href='/addEmployee/update/'+user._id) Update
                     td
-                        form(method="post" action='/employee/delete')
+                        form(method="post" action='/addEmployee/delete')
                             input(type="hidden", placeholder="", name="id", value=user._id)
-                            button.btn.btn-dark.btn-block(type="submit") Delete
+                            a(href='/addEmployee/update/'+user._id) Delete
     div.form-row
         div.pull-right
             a(class='button', href='/stayclean/stayclean') StayClean

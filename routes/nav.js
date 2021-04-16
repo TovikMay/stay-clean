@@ -3,14 +3,14 @@ const router = express.Router();
 const multer = require('multer')
 
 
-router.get("/aboutUs",  (req, res) => {
-  res.render("aboutUs", { title: "aboutUs" });
+router.get("/nav",  (req, res) => {
+  res.render("nav", { title: "nav" });
 });
 
-router.post('/aboutUs', async(req,res) => {
+router.post('/nav', async(req,res) => {
   try{
-    const aboutUs = new aboutUs(req.body);
-    await aboutUs.save()
+    const nav = new nav(req.body);
+    await nav.save()
     res.send('Thank you. Please continue');
   }
   catch(err){

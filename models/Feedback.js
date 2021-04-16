@@ -4,12 +4,12 @@ const mongoose = require('mongoose');
 
 
 //schema for data
-const contactSchema = new mongoose.Schema({
+const feedbackSchema = new mongoose.Schema({
     fullname: {
         type: String,
         required: 'Please Enter your fullname'
     },
-    enteremail: {
+   email: {
         type: String,
         unique: true,
         required: 'Please Enter your email'
@@ -26,4 +26,4 @@ const contactSchema = new mongoose.Schema({
 })
 
 //exporting mongoose model
-module.exports = mongoose.model('Contact', contactSchema);
+module.exports = mongoose.model('Feedback', feedbackSchema);
